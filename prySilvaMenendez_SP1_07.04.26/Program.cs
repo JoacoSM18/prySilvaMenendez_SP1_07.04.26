@@ -16,7 +16,7 @@ namespace prySilvaMenendez_SP1_07._04._26
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmPrincipal());
         }
     }
 }
