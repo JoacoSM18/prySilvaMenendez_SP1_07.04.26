@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace prySilvaMenendez_SP1_07._04._26
@@ -15,6 +8,23 @@ namespace prySilvaMenendez_SP1_07._04._26
         public frmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void btnEspecialidades_Click(object sender, EventArgs e)
+        {
+            frmEspecialidades frm = new frmEspecialidades();
+            frm.ShowDialog();
+        }
+
+        private void btnMedicos_Click(object sender, EventArgs e)
+        {
+            frmMedicos frm = new frmMedicos();
+            frm.ShowDialog();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
