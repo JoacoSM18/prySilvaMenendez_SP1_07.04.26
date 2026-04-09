@@ -105,7 +105,7 @@ namespace prySilvaMenendez_SP1_07._04._26
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.BackColor = System.Drawing.Color.Aquamarine;
             this.ClientSize = new System.Drawing.Size(464, 462);
             this.Controls.Add(this.dgvEspecialidades);
             this.Controls.Add(this.btnLimpiar);
