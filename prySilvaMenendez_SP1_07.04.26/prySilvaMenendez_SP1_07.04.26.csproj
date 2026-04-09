@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="claseEspecialidades.cs" />
     <Compile Include="claseMedico.cs" />
     <Compile Include="frmEspecialidades.cs">
       <SubType>Form</SubType>

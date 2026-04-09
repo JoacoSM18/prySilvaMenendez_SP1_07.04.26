@@ -26,5 +26,10 @@ namespace prySilvaMenendez_SP1_07._04._26
         {
             this.Close();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
