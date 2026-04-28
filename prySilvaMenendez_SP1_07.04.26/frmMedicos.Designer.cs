@@ -167,10 +167,10 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.dgvMedicos.AllowUserToAddRows = false;
             this.dgvMedicos.AllowUserToDeleteRows = false;
             this.dgvMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicos.Location = new System.Drawing.Point(70, 50);
+            this.dgvMedicos.Location = new System.Drawing.Point(51, 50);
             this.dgvMedicos.Name = "dgvMedicos";
             this.dgvMedicos.ReadOnly = true;
-            this.dgvMedicos.Size = new System.Drawing.Size(348, 194);
+            this.dgvMedicos.Size = new System.Drawing.Size(372, 194);
             this.dgvMedicos.TabIndex = 2;
             // 
             // frmMedicos
@@ -178,7 +178,7 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(488, 461);
             this.Controls.Add(this.groupBoxConsulta);
             this.Controls.Add(this.groupBoxAgregar);
             this.Controls.Add(this.lblTitulo);
