@@ -7,7 +7,6 @@ namespace prySilvaMenendez_SP1_07._04._26
     public partial class frmEspecialidades : Form
     {
         private List<Especialidad> especialidades = new List<Especialidad>();
-
         public frmEspecialidades()
         {
             InitializeComponent();
@@ -85,6 +84,11 @@ namespace prySilvaMenendez_SP1_07._04._26
             txtNumero.Clear();
             txtNombre.Clear();
             txtNumero.Focus();
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

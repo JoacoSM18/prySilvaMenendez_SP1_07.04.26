@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEspecialidades = new System.Windows.Forms.Button();
             this.btnMedicos = new System.Windows.Forms.Button();
@@ -89,6 +90,7 @@
             this.Controls.Add(this.btnMedicos);
             this.Controls.Add(this.btnEspecialidades);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Clínica";

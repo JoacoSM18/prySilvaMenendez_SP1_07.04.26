@@ -17,6 +17,7 @@ namespace prySilvaMenendez_SP1_07._04._26
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEspecialidades));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -41,40 +42,46 @@ namespace prySilvaMenendez_SP1_07._04._26
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.Location = new System.Drawing.Point(12, 50);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(44, 13);
+            this.lblNumero.Size = new System.Drawing.Size(55, 16);
             this.lblNumero.TabIndex = 1;
             this.lblNumero.Text = "Número";
             // 
             // txtNumero
             // 
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(70, 47);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(150, 20);
+            this.txtNumero.Size = new System.Drawing.Size(150, 22);
             this.txtNumero.TabIndex = 2;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(12, 80);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(56, 16);
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "Nombre";
             // 
             // txtNombre
             // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(70, 77);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(300, 20);
+            this.txtNombre.Size = new System.Drawing.Size(300, 22);
             this.txtNombre.TabIndex = 4;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(70, 110);
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(70, 115);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(91, 24);
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -82,9 +89,10 @@ namespace prySilvaMenendez_SP1_07._04._26
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(151, 110);
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(207, 115);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(85, 24);
             this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -115,6 +123,7 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.lblTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEspecialidades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Especialidades";
