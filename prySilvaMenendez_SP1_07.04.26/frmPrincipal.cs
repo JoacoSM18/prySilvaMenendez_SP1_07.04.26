@@ -22,6 +22,11 @@ namespace prySilvaMenendez_SP1_07._04._26
 
         private void btnMedicos_Click(object sender, EventArgs e)
         {
+            if (especialidades.Count == 0)
+            {
+                MessageBox.Show("No hay Especialidades Cargadas. Agregue una Primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             frmMedicos frm = new frmMedicos(especialidades, medicos);
             frm.ShowDialog();
         }
@@ -33,8 +38,18 @@ namespace prySilvaMenendez_SP1_07._04._26
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
+            if (especialidades.Count == 0)
+            {
+                MessageBox.Show("No hay Especialidades Cargadas. Agregue una Primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             frmConsulta frm = new frmConsulta(especialidades,medicos);
             frm.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

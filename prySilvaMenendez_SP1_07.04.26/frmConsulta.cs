@@ -29,12 +29,6 @@ namespace prySilvaMenendez_SP1_07._04._26
 
         private void ActualizarComboEspecialidades()
         {
-            if (especialidades.Count == 0)
-            {
-                MessageBox.Show("No hay especialidades cargadas. Agregue una primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             cbxEspecialidad.DataSource = null;
             cbxEspecialidad.DataSource = new List<claseEspecialidad>(especialidades);
             cbxEspecialidad.DisplayMember = "Nombre";

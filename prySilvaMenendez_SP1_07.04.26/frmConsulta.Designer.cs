@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsulta));
             this.groupBoxConsulta = new System.Windows.Forms.GroupBox();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.cbxEspecialidad = new System.Windows.Forms.ComboBox();
@@ -85,8 +86,10 @@
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(539, 450);
             this.Controls.Add(this.groupBoxConsulta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsulta";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Consulta de Medico por Especialidad";
             this.Load += new System.EventHandler(this.frmConsulta_Load);
             this.groupBoxConsulta.ResumeLayout(false);
             this.groupBoxConsulta.PerformLayout();

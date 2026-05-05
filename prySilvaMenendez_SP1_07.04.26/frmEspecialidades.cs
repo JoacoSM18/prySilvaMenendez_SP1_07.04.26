@@ -35,12 +35,12 @@ namespace prySilvaMenendez_SP1_07._04._26
 
             if (ExisteEspecialidad(numero))
             {
-                MessageBox.Show("El número de especialidad ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El Número de Especialidad ya Existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             especialidades.Add(new claseEspecialidad { Numero = numero, Nombre = nombre });
-            MessageBox.Show("Especialidad registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Especialidad Registrada Correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarCampos();
             CargarEspecialidades();
         }
@@ -54,21 +54,21 @@ namespace prySilvaMenendez_SP1_07._04._26
         {
             if (string.IsNullOrWhiteSpace(txtNumero.Text))
             {
-                MessageBox.Show("Ingrese el número de especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el Número de Especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNumero.Focus();
                 return false;
             }
 
             if (!int.TryParse(txtNumero.Text, out int numero) || numero <= 0)
             {
-                MessageBox.Show("El número debe ser un entero positivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El Número Debe ser un Entero Positivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNumero.Focus();
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
-                MessageBox.Show("Ingrese el nombre de la especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el Nombre de la Especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
                 return false;
             }

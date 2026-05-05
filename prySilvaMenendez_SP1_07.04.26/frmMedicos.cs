@@ -19,9 +19,16 @@ namespace prySilvaMenendez_SP1_07._04._26
 
         private void frmMedicos_Load(object sender, EventArgs e)
         {
-            
+            ActualizarComboEspecialidades();
         }
 
+        private void ActualizarComboEspecialidades()
+        {
+            cbxEspecialidadMedico.DataSource = null;
+            cbxEspecialidadMedico.DataSource = new List<claseEspecialidad>(especialidades);
+            cbxEspecialidadMedico.DisplayMember = "Nombre";
+            cbxEspecialidadMedico.ValueMember = "Numero";
+        }
 
         private void btnAgregarMedico_Click(object sender, EventArgs e)
         {
@@ -30,7 +37,7 @@ namespace prySilvaMenendez_SP1_07._04._26
 
             if (cbxEspecialidadMedico.SelectedItem == null)
             {
-                MessageBox.Show("Seleccione una especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione una Especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -40,12 +47,12 @@ namespace prySilvaMenendez_SP1_07._04._26
 
             if (ExisteMedico(matricula))
             {
-                MessageBox.Show("La matrícula de médico ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La Matrícula de Médico ya Existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             medicos.Add(new claseMedico(matricula, nombre, "", especialidadSeleccionada.Numero));
-            MessageBox.Show("Médico registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Médico Registrado Correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarCamposMedico();
         }
 
@@ -58,21 +65,21 @@ namespace prySilvaMenendez_SP1_07._04._26
         {
             if (string.IsNullOrWhiteSpace(txtMatricula.Text))
             {
-                MessageBox.Show("Ingrese la matrícula del médico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese la Matrícula del Médico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMatricula.Focus();
                 return false;
             }
 
             if (!int.TryParse(txtMatricula.Text, out int matricula) || matricula <= 0)
             {
-                MessageBox.Show("La matrícula debe ser un entero positivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La Matrícula Debe ser un Entero Positivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMatricula.Focus();
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtNombreMedico.Text))
             {
-                MessageBox.Show("Ingrese el nombre del médico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el Nombre del Médico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombreMedico.Focus();
                 return false;
             }

@@ -42,7 +42,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.LightBlue;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(136, 33);
+            this.lblTitulo.Location = new System.Drawing.Point(79, 31);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(317, 26);
             this.lblTitulo.TabIndex = 0;
@@ -51,7 +51,7 @@
             // btnEspecialidades
             // 
             this.btnEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEspecialidades.Location = new System.Drawing.Point(195, 91);
+            this.btnEspecialidades.Location = new System.Drawing.Point(138, 89);
             this.btnEspecialidades.Name = "btnEspecialidades";
             this.btnEspecialidades.Size = new System.Drawing.Size(200, 45);
             this.btnEspecialidades.TabIndex = 1;
@@ -62,7 +62,7 @@
             // btnMedicos
             // 
             this.btnMedicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedicos.Location = new System.Drawing.Point(195, 166);
+            this.btnMedicos.Location = new System.Drawing.Point(138, 164);
             this.btnMedicos.Name = "btnMedicos";
             this.btnMedicos.Size = new System.Drawing.Size(200, 48);
             this.btnMedicos.TabIndex = 2;
@@ -73,7 +73,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(249, 336);
+            this.btnSalir.Location = new System.Drawing.Point(192, 334);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(98, 41);
             this.btnSalir.TabIndex = 3;
@@ -84,7 +84,7 @@
             // btnConsulta
             // 
             this.btnConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulta.Location = new System.Drawing.Point(195, 248);
+            this.btnConsulta.Location = new System.Drawing.Point(138, 246);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(200, 48);
             this.btnConsulta.TabIndex = 4;
@@ -97,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(582, 405);
+            this.ClientSize = new System.Drawing.Size(486, 405);
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnMedicos);
@@ -107,6 +107,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Clínica";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

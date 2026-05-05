@@ -54,7 +54,7 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.groupBoxAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxAgregar.Location = new System.Drawing.Point(24, 43);
             this.groupBoxAgregar.Name = "groupBoxAgregar";
-            this.groupBoxAgregar.Size = new System.Drawing.Size(460, 150);
+            this.groupBoxAgregar.Size = new System.Drawing.Size(460, 164);
             this.groupBoxAgregar.TabIndex = 1;
             this.groupBoxAgregar.TabStop = false;
             this.groupBoxAgregar.Text = "Agregar Médico";
@@ -112,7 +112,7 @@ namespace prySilvaMenendez_SP1_07._04._26
             // 
             this.btnAgregarMedico.Location = new System.Drawing.Point(99, 115);
             this.btnAgregarMedico.Name = "btnAgregarMedico";
-            this.btnAgregarMedico.Size = new System.Drawing.Size(76, 23);
+            this.btnAgregarMedico.Size = new System.Drawing.Size(76, 29);
             this.btnAgregarMedico.TabIndex = 6;
             this.btnAgregarMedico.Text = "Agregar";
             this.btnAgregarMedico.UseVisualStyleBackColor = true;
@@ -120,9 +120,9 @@ namespace prySilvaMenendez_SP1_07._04._26
             // 
             // btnLimpiarMedico
             // 
-            this.btnLimpiarMedico.Location = new System.Drawing.Point(220, 115);
+            this.btnLimpiarMedico.Location = new System.Drawing.Point(233, 115);
             this.btnLimpiarMedico.Name = "btnLimpiarMedico";
-            this.btnLimpiarMedico.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiarMedico.Size = new System.Drawing.Size(75, 29);
             this.btnLimpiarMedico.TabIndex = 7;
             this.btnLimpiarMedico.Text = "Limpiar";
             this.btnLimpiarMedico.UseVisualStyleBackColor = true;
