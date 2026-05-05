@@ -39,7 +39,9 @@ namespace prySilvaMenendez_SP1_07._04._26
                 return;
             }
 
-            especialidades.Add(new claseEspecialidad { Numero = numero, Nombre = nombre });
+            claseEspecialidad nueva = new claseEspecialidad(numero, nombre);
+            especialidades.Add(nueva);
+            nueva.RegistrarEspecialidadenBD();
             MessageBox.Show("Especialidad Registrada Correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarCampos();
             CargarEspecialidades();

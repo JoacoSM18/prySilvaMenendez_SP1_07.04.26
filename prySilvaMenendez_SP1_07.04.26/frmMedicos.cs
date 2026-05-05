@@ -51,7 +51,9 @@ namespace prySilvaMenendez_SP1_07._04._26
                 return;
             }
 
-            medicos.Add(new claseMedico(matricula, nombre, "", especialidadSeleccionada.Numero));
+            claseMedico nuevo = new claseMedico(matricula, nombre, "", especialidadSeleccionada.Numero);
+            medicos.Add(nuevo);
+            nuevo.RegistrarMedicoenBD();
             MessageBox.Show("Médico Registrado Correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarCamposMedico();
         }
