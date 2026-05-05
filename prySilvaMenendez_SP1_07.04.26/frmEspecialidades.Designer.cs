@@ -45,18 +45,17 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumero.Location = new System.Drawing.Point(12, 50);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(55, 16);
+            this.lblNumero.Size = new System.Drawing.Size(167, 16);
             this.lblNumero.TabIndex = 1;
-            this.lblNumero.Text = "Número";
+            this.lblNumero.Text = "Codigo de la Especialidad";
             // 
             // txtNumero
             // 
             this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(70, 47);
+            this.txtNumero.Location = new System.Drawing.Point(207, 47);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(150, 22);
             this.txtNumero.TabIndex = 2;
-            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // lblNombre
             // 
@@ -64,16 +63,16 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(12, 80);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.Size = new System.Drawing.Size(172, 16);
             this.lblNombre.TabIndex = 3;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre de la Especialidad";
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(70, 77);
+            this.txtNombre.Location = new System.Drawing.Point(207, 77);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(300, 22);
+            this.txtNombre.Size = new System.Drawing.Size(231, 22);
             this.txtNombre.TabIndex = 4;
             // 
             // btnAgregar
@@ -103,17 +102,17 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.dgvEspecialidades.AllowUserToAddRows = false;
             this.dgvEspecialidades.AllowUserToDeleteRows = false;
             this.dgvEspecialidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEspecialidades.Location = new System.Drawing.Point(70, 150);
+            this.dgvEspecialidades.Location = new System.Drawing.Point(70, 160);
             this.dgvEspecialidades.Name = "dgvEspecialidades";
             this.dgvEspecialidades.ReadOnly = true;
-            this.dgvEspecialidades.Size = new System.Drawing.Size(300, 300);
+            this.dgvEspecialidades.Size = new System.Drawing.Size(300, 290);
             this.dgvEspecialidades.TabIndex = 7;
             // 
             // frmEspecialidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aquamarine;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(464, 462);
             this.Controls.Add(this.dgvEspecialidades);
             this.Controls.Add(this.btnLimpiar);

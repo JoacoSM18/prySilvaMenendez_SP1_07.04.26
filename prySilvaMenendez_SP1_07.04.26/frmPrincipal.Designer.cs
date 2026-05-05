@@ -33,12 +33,13 @@
             this.btnEspecialidades = new System.Windows.Forms.Button();
             this.btnMedicos = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnConsulta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.SkyBlue;
+            this.lblTitulo.BackColor = System.Drawing.Color.LightBlue;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(136, 33);
@@ -50,9 +51,9 @@
             // btnEspecialidades
             // 
             this.btnEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEspecialidades.Location = new System.Drawing.Point(195, 114);
+            this.btnEspecialidades.Location = new System.Drawing.Point(195, 91);
             this.btnEspecialidades.Name = "btnEspecialidades";
-            this.btnEspecialidades.Size = new System.Drawing.Size(200, 63);
+            this.btnEspecialidades.Size = new System.Drawing.Size(200, 45);
             this.btnEspecialidades.TabIndex = 1;
             this.btnEspecialidades.Text = "Gestionar Especialidades";
             this.btnEspecialidades.UseVisualStyleBackColor = true;
@@ -61,9 +62,9 @@
             // btnMedicos
             // 
             this.btnMedicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMedicos.Location = new System.Drawing.Point(195, 210);
+            this.btnMedicos.Location = new System.Drawing.Point(195, 166);
             this.btnMedicos.Name = "btnMedicos";
-            this.btnMedicos.Size = new System.Drawing.Size(200, 64);
+            this.btnMedicos.Size = new System.Drawing.Size(200, 48);
             this.btnMedicos.TabIndex = 2;
             this.btnMedicos.Text = "Gestionar Médicos";
             this.btnMedicos.UseVisualStyleBackColor = true;
@@ -80,12 +81,24 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnConsulta
+            // 
+            this.btnConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulta.Location = new System.Drawing.Point(195, 248);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(200, 48);
+            this.btnConsulta.TabIndex = 4;
+            this.btnConsulta.Text = "Consulta de Medicos por Especialidad";
+            this.btnConsulta.UseVisualStyleBackColor = true;
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(582, 405);
+            this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnMedicos);
             this.Controls.Add(this.btnEspecialidades);
@@ -94,7 +107,6 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Clínica";
-            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +118,7 @@
         private System.Windows.Forms.Button btnEspecialidades;
         private System.Windows.Forms.Button btnMedicos;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnConsulta;
     }
 }
 

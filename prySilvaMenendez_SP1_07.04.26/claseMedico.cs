@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace prySilvaMenendez_SP1_07._04._26
 {
-    internal class claseMedico
+    public class claseMedico
     {
         public int Matricula { get; set; }
         public string Nombre { get; set; } 

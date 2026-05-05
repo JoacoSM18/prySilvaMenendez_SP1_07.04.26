@@ -6,10 +6,12 @@ namespace prySilvaMenendez_SP1_07._04._26
 {
     public partial class frmEspecialidades : Form
     {
-        private List<Especialidad> especialidades = new List<Especialidad>();
-        public frmEspecialidades()
+        private List<claseEspecialidad> especialidades;
+
+        public frmEspecialidades(List<claseEspecialidad> especialidades)
         {
             InitializeComponent();
+            this.especialidades = especialidades;
         }
 
         private void frmEspecialidades_Load(object sender, EventArgs e)
@@ -20,7 +22,7 @@ namespace prySilvaMenendez_SP1_07._04._26
         private void CargarEspecialidades()
         {
             dgvEspecialidades.DataSource = null;
-            dgvEspecialidades.DataSource = especialidades;
+            dgvEspecialidades.DataSource = new List<claseEspecialidad>(especialidades);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace prySilvaMenendez_SP1_07._04._26
                 return;
             }
 
-            especialidades.Add(new Especialidad { Numero = numero, Nombre = nombre });
+            especialidades.Add(new claseEspecialidad { Numero = numero, Nombre = nombre });
             MessageBox.Show("Especialidad registrada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarCampos();
             CargarEspecialidades();
@@ -85,16 +87,5 @@ namespace prySilvaMenendez_SP1_07._04._26
             txtNombre.Clear();
             txtNumero.Focus();
         }
-
-        private void txtNumero_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-    }
-
-    public class Especialidad
-    {
-        public int Numero { get; set; }
-        public string Nombre { get; set; }
     }
 }

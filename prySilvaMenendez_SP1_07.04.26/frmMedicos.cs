@@ -7,51 +7,26 @@ namespace prySilvaMenendez_SP1_07._04._26
 {
     public partial class frmMedicos : Form
     {
-        private List<Medico> medicos = new List<Medico>();
-        private List<Especialidad> especialidades = new List<Especialidad>();
+        private List<claseEspecialidad> especialidades;
+        private List<claseMedico> medicos;
 
-        public frmMedicos()
+        public frmMedicos(List<claseEspecialidad> especialidades, List<claseMedico> medicos)
         {
             InitializeComponent();
+            this.especialidades = especialidades;
+            this.medicos = medicos;
         }
 
         private void frmMedicos_Load(object sender, EventArgs e)
         {
-            CargarEspecialidades();
-            ActualizarComboEspecialidades();
+            
         }
 
-        private void CargarEspecialidades()
-        {
-            especialidades.Clear();
-            especialidades.Add(new Especialidad { Numero = 1, Nombre = "Cardiología" });
-            especialidades.Add(new Especialidad { Numero = 2, Nombre = "Neurología" });
-            especialidades.Add(new Especialidad { Numero = 3, Nombre = "Pediatría" });
-            especialidades.Add(new Especialidad { Numero = 4, Nombre = "Oftalmología" });
-        }
-
-        private void ActualizarComboEspecialidades()
-        {
-            cbxEspecialidad.DataSource = null;
-            cbxEspecialidad.DataSource = new List<Especialidad>(especialidades);
-            cbxEspecialidad.DisplayMember = "Nombre";
-            cbxEspecialidad.ValueMember = "Numero";
-            cbxEspecialidad.SelectedIndex = 0;
-
-            cbxEspecialidadMedico.DataSource = null;
-            cbxEspecialidadMedico.DataSource = new List<Especialidad>(especialidades);
-            cbxEspecialidadMedico.DisplayMember = "Nombre";
-            cbxEspecialidadMedico.ValueMember = "Numero";
-            cbxEspecialidadMedico.SelectedIndex = 0;
-        }
 
         private void btnAgregarMedico_Click(object sender, EventArgs e)
         {
             if (!ValidarCamposMedico())
                 return;
-
-            int matricula = int.Parse(txtMatricula.Text);
-            string nombre = txtNombreMedico.Text.Trim();
 
             if (cbxEspecialidadMedico.SelectedItem == null)
             {
@@ -59,8 +34,9 @@ namespace prySilvaMenendez_SP1_07._04._26
                 return;
             }
 
-            Especialidad especialidadSeleccionada = (Especialidad)cbxEspecialidadMedico.SelectedItem;
-            int numeroEspecialidad = especialidadSeleccionada.Numero;
+            int matricula = int.Parse(txtMatricula.Text);
+            string nombre = txtNombreMedico.Text.Trim();
+            claseEspecialidad especialidadSeleccionada = (claseEspecialidad)cbxEspecialidadMedico.SelectedItem;
 
             if (ExisteMedico(matricula))
             {
@@ -68,7 +44,7 @@ namespace prySilvaMenendez_SP1_07._04._26
                 return;
             }
 
-            medicos.Add(new Medico { Matricula = matricula, Nombre = nombre, NumeroEspecialidad = numeroEspecialidad });
+            medicos.Add(new claseMedico(matricula, nombre, "", especialidadSeleccionada.Numero));
             MessageBox.Show("Médico registrado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimpiarCamposMedico();
         }
@@ -76,18 +52,6 @@ namespace prySilvaMenendez_SP1_07._04._26
         private void btnLimpiarMedico_Click(object sender, EventArgs e)
         {
             LimpiarCamposMedico();
-        }
-
-        private void cbxEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbxEspecialidad.SelectedItem != null)
-            {
-                Especialidad especialidadSeleccionada = (Especialidad)cbxEspecialidad.SelectedItem;
-                int numeroEspecialidad = especialidadSeleccionada.Numero;
-                var medicosEspecialidad = medicos.Where(m => m.NumeroEspecialidad == numeroEspecialidad).ToList();
-                dgvMedicos.DataSource = null;
-                dgvMedicos.DataSource = medicosEspecialidad;
-            }
         }
 
         private bool ValidarCamposMedico()
@@ -127,12 +91,10 @@ namespace prySilvaMenendez_SP1_07._04._26
             txtNombreMedico.Clear();
             txtMatricula.Focus();
         }
-    }
 
-    public class Medico
-    {
-        public int Matricula { get; set; }
-        public string Nombre { get; set; }
-        public int NumeroEspecialidad { get; set; }
+        private void groupBoxConsulta_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

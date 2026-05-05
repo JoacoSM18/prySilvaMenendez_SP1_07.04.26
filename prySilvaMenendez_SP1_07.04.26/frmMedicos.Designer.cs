@@ -28,20 +28,14 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.cbxEspecialidadMedico = new System.Windows.Forms.ComboBox();
             this.btnAgregarMedico = new System.Windows.Forms.Button();
             this.btnLimpiarMedico = new System.Windows.Forms.Button();
-            this.groupBoxConsulta = new System.Windows.Forms.GroupBox();
-            this.lblEspecialidad = new System.Windows.Forms.Label();
-            this.cbxEspecialidad = new System.Windows.Forms.ComboBox();
-            this.dgvMedicos = new System.Windows.Forms.DataGridView();
             this.groupBoxAgregar.SuspendLayout();
-            this.groupBoxConsulta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(24, 12);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(196, 24);
             this.lblTitulo.TabIndex = 0;
@@ -58,7 +52,7 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.groupBoxAgregar.Controls.Add(this.btnAgregarMedico);
             this.groupBoxAgregar.Controls.Add(this.btnLimpiarMedico);
             this.groupBoxAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxAgregar.Location = new System.Drawing.Point(12, 40);
+            this.groupBoxAgregar.Location = new System.Drawing.Point(24, 43);
             this.groupBoxAgregar.Name = "groupBoxAgregar";
             this.groupBoxAgregar.Size = new System.Drawing.Size(460, 150);
             this.groupBoxAgregar.TabIndex = 1;
@@ -134,55 +128,12 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.btnLimpiarMedico.UseVisualStyleBackColor = true;
             this.btnLimpiarMedico.Click += new System.EventHandler(this.btnLimpiarMedico_Click);
             // 
-            // groupBoxConsulta
-            // 
-            this.groupBoxConsulta.Controls.Add(this.lblEspecialidad);
-            this.groupBoxConsulta.Controls.Add(this.cbxEspecialidad);
-            this.groupBoxConsulta.Controls.Add(this.dgvMedicos);
-            this.groupBoxConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxConsulta.Location = new System.Drawing.Point(12, 200);
-            this.groupBoxConsulta.Name = "groupBoxConsulta";
-            this.groupBoxConsulta.Size = new System.Drawing.Size(460, 283);
-            this.groupBoxConsulta.TabIndex = 2;
-            this.groupBoxConsulta.TabStop = false;
-            this.groupBoxConsulta.Text = "Consultar Médicos por Especialidad";
-            // 
-            // lblEspecialidad
-            // 
-            this.lblEspecialidad.AutoSize = true;
-            this.lblEspecialidad.Location = new System.Drawing.Point(6, 30);
-            this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(87, 16);
-            this.lblEspecialidad.TabIndex = 0;
-            this.lblEspecialidad.Text = "Especialidad";
-            // 
-            // cbxEspecialidad
-            // 
-            this.cbxEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxEspecialidad.Location = new System.Drawing.Point(99, 22);
-            this.cbxEspecialidad.Name = "cbxEspecialidad";
-            this.cbxEspecialidad.Size = new System.Drawing.Size(250, 24);
-            this.cbxEspecialidad.TabIndex = 1;
-            this.cbxEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cbxEspecialidad_SelectedIndexChanged);
-            // 
-            // dgvMedicos
-            // 
-            this.dgvMedicos.AllowUserToAddRows = false;
-            this.dgvMedicos.AllowUserToDeleteRows = false;
-            this.dgvMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicos.Location = new System.Drawing.Point(48, 63);
-            this.dgvMedicos.Name = "dgvMedicos";
-            this.dgvMedicos.ReadOnly = true;
-            this.dgvMedicos.Size = new System.Drawing.Size(372, 214);
-            this.dgvMedicos.TabIndex = 2;
-            // 
             // frmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(488, 495);
-            this.Controls.Add(this.groupBoxConsulta);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(511, 219);
             this.Controls.Add(this.groupBoxAgregar);
             this.Controls.Add(this.lblTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -192,9 +143,6 @@ namespace prySilvaMenendez_SP1_07._04._26
             this.Load += new System.EventHandler(this.frmMedicos_Load);
             this.groupBoxAgregar.ResumeLayout(false);
             this.groupBoxAgregar.PerformLayout();
-            this.groupBoxConsulta.ResumeLayout(false);
-            this.groupBoxConsulta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,9 +160,5 @@ namespace prySilvaMenendez_SP1_07._04._26
         private System.Windows.Forms.ComboBox cbxEspecialidadMedico;
         private System.Windows.Forms.Button btnAgregarMedico;
         private System.Windows.Forms.Button btnLimpiarMedico;
-        private System.Windows.Forms.GroupBox groupBoxConsulta;
-        private System.Windows.Forms.Label lblEspecialidad;
-        private System.Windows.Forms.ComboBox cbxEspecialidad;
-        private System.Windows.Forms.DataGridView dgvMedicos;
     }
 }
