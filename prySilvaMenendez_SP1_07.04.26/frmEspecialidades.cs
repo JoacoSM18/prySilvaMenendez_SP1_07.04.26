@@ -56,14 +56,14 @@ namespace prySilvaMenendez_SP1_07._04._26
         {
             if (string.IsNullOrWhiteSpace(txtNumero.Text))
             {
-                MessageBox.Show("Ingrese el Número de Especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el Codigo de la Especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNumero.Focus();
                 return false;
             }
 
             if (!int.TryParse(txtNumero.Text, out int numero) || numero <= 0)
             {
-                MessageBox.Show("El Número Debe ser un Entero Positivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El Código de la Especialidad Debe ser un Entero Positivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNumero.Focus();
                 return false;
             }
